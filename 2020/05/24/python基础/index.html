@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
+    <meta name="keywords" content="python基础, Hexo">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>python基础 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">python基础</h1>
                 </div>
             </div>
         </div>
@@ -436,9 +436,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/python/">
+                                <span class="chip bg-color">python</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -466,20 +470,120 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+                <h1 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h1><ul>
+<li><a href="#列表是什么？">列表是什么？</a><ul>
+<li><a href="#访问列表元素">访问列表元素</a></li>
+<li><a href="#使用列表中的各个值">使用列表中的各个值</a></li>
+</ul>
+</li>
+<li>修改、添加和删除元素</li>
+<li>组织列表<ul>
+<li>使用sort()对列表进行排序</li>
+<li>使用sorted()对列表进行排序</li>
+</ul>
+</li>
+<li>遍历整个列表</li>
+<li>创建数值列表<ul>
+<li>使用函数range()</li>
+</ul>
+</li>
+<li>切片</li>
+<li>元组</li>
+<li>字典<ul>
+<li>一个简单的字典</li>
+<li>遍历字典</li>
+<li>嵌套<ul>
+<li>字典列表</li>
+<li>在字典中存储列表</li>
+<li>在字典中存储字典</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="列表是什么？"><a href="#列表是什么？" class="headerlink" title="列表是什么？"></a>列表是什么？</h2><p><strong>列表由一系列特定顺序排列的元素组成的。在python中用 [] 来表示列表，并用 , 来分隔其中的元素。</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">bicycles = [<span class="string">'trek'</span>, <span class="string">'cannondale'</span>, <span class="string">'specialized'</span>]</span><br><span class="line">print(bicycles)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h3 id="访问列表元素"><a href="#访问列表元素" class="headerlink" title="访问列表元素"></a>访问列表元素</h3><p>访问bicycles中的第一个元素</p>
+<p><code>print(bicycles[0])</code></p>
+<p>可以使用title()方法让元素的格式更整洁</p>
+<p><code>print(bicycles[0].title())</code></p>
+<p><strong>注意：在python中，第一个元素的索引为0，而不是1</strong></p>
+<h3 id="使用列表中的各个值"><a href="#使用列表中的各个值" class="headerlink" title="使用列表中的各个值"></a>使用列表中的各个值</h3><p>可以像其他变量一样使用列表中的各个值。例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">message = <span class="string">"My first bicycle was a "</span> + bicycles[<span class="number">0</span>].title() + <span class="string">"."</span></span><br><span class="line">print(message)</span><br><span class="line"></span><br><span class="line"><span class="comment">### My first bicycle was a Trek.</span></span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="修改、添加和删除元素"><a href="#修改、添加和删除元素" class="headerlink" title="修改、添加和删除元素"></a>修改、添加和删除元素</h3><p>在python中创建的大多数列表都是动态的，这意味着可以随意地对列表进行修改、删除和添加。</p>
+<p>例如：</p>
+<ol>
+<li><p>修改元素的值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bicycles = [<span class="string">'trek'</span>, <span class="string">'cannondale'</span>, <span class="string">'specialized'</span>]</span><br><span class="line">print(bicycles)</span><br><span class="line">bicycles[<span class="number">0</span>] = <span class="string">'trak'</span></span><br><span class="line">print(bicycles)</span><br><span class="line">   </span><br><span class="line"><span class="comment">### ['trek', 'cannondale', 'specialized']</span></span><br><span class="line"><span class="comment">### ['trak', 'cannondale', 'specialized']</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加元素</p>
+<ol>
+<li><p>在列表的末尾添加元素</p>
+<p><strong>使用append()方法</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bicycles = [<span class="string">'trek'</span>, <span class="string">'cannondale'</span>, <span class="string">'specialized'</span>]</span><br><span class="line">print(bicycles)</span><br><span class="line">bicycles.append(<span class="string">'ducati'</span>)</span><br><span class="line">print(bicycles)</span><br><span class="line"></span><br><span class="line"><span class="comment">### ['trek', 'cannondale', 'specialized']</span></span><br><span class="line"><span class="comment">### ['trek', 'cannondale', 'specialized', 'ducati']</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在列表中插入元素</p>
+<p><strong>使用insert()方法</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bicycles = [<span class="string">'trek'</span>, <span class="string">'cannondale'</span>, <span class="string">'specialized'</span>]</span><br><span class="line">print(bicycles)</span><br><span class="line">bicycles.insert(<span class="number">0</span>, <span class="string">'ducati'</span>)</span><br><span class="line">print(bicycles)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+</li>
+</ol>
+</li>
+</ol>
+<pre><code>    ### [&apos;trek&apos;, &apos;cannondale&apos;, &apos;specialized&apos;]
+    ### [&apos;ducati&apos;, &apos;trek&apos;, &apos;cannondale&apos;, &apos;specialized&apos;]
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. 删除元素</span><br><span class="line"></span><br><span class="line">   1. 如果要知道删除元素的位置，可以使用del语句删除元素</span><br><span class="line"></span><br><span class="line">      &#96;&#96;&#96;python</span><br><span class="line">      bicycles &#x3D; [&#39;trek&#39;, &#39;cannondale&#39;, &#39;specialized&#39;]</span><br><span class="line">      print(bicycles)</span><br><span class="line">      del bicycles[0]</span><br><span class="line">      print(bicycles)</span><br><span class="line">      </span><br><span class="line">      ### [&#39;trek&#39;, &#39;cannondale&#39;, &#39;specialized&#39;]</span><br><span class="line">      ### [&#39;cannondale&#39;, &#39;specialized&#39;]</span><br></pre></td></tr></table></figure>
 
+2. 使用pop方法删除元素
+
+   有时候，你需要将元素从列表中删除，并接着使用它的值。
+
+   <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bicycles = [<span class="string">'trek'</span>, <span class="string">'cannondale'</span>, <span class="string">'specialized'</span>]</span><br><span class="line">print(bicycles)</span><br><span class="line">popped_bicycles = bicycles.pop()</span><br><span class="line">print(popped_bicycles)</span><br><span class="line"></span><br><span class="line"><span class="comment">### ['trek', 'cannondale', 'specialized']</span></span><br><span class="line"><span class="comment">### specialized</span></span><br></pre></td></tr></table></figure>
+
+   实际上，可以使用pop()来删除列表中的任何位置的元素，只需要在括号中指定要删除的元素的索引即可。</code></pre><h1 id="组织列表"><a href="#组织列表" class="headerlink" title="组织列表"></a>组织列表</h1><h2 id="使用sort-方法对列表进行排序"><a href="#使用sort-方法对列表进行排序" class="headerlink" title="使用sort()方法对列表进行排序"></a>使用sort()方法对列表进行排序</h2><p>在创建的列表中，元素的排列顺序通常是无法预测的，所以可以用sort()方法进行排序。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bicycles = [<span class="string">'trek'</span>, <span class="string">'cannondale'</span>, <span class="string">'specialized'</span>]</span><br><span class="line">print(bicycles)</span><br><span class="line">bicycles.sort()</span><br><span class="line">print(bicycles)</span><br><span class="line"></span><br><span class="line"><span class="comment">### ['trek', 'cannondale', 'specialized']</span></span><br><span class="line"><span class="comment">### ['cannondale', 'specialized', 'trek']</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用sorted-进行临时排序"><a href="#使用sorted-进行临时排序" class="headerlink" title="使用sorted()进行临时排序"></a>使用sorted()进行临时排序</h2><p>要保留元素原来的排列顺序，同时以特定的顺序将他们呈现出来，可以使用函数sorted()。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">bicycles = [<span class="string">'trek'</span>, <span class="string">'cannondale'</span>, <span class="string">'specialized'</span>]</span><br><span class="line">print(<span class="string">"Here is the original list:"</span>)</span><br><span class="line">print(bicycles)</span><br><span class="line">print(<span class="string">"\nHere is the sorted list:"</span>)</span><br><span class="line">print(sorted(bicycles))</span><br><span class="line">print(<span class="string">"\nHere is the original list again:"</span>)</span><br><span class="line">print(bicycles)</span><br><span class="line"></span><br><span class="line"><span class="comment">##########</span></span><br><span class="line"><span class="comment">## Here is the original list:</span></span><br><span class="line"><span class="comment">## ['trek', 'cannondale', 'specialized']</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## Here is the sorted list:</span></span><br><span class="line"><span class="comment">## ['cannondale', 'specialized', 'trek']</span></span><br><span class="line"></span><br><span class="line"><span class="comment">## Here is the original list again:</span></span><br><span class="line"><span class="comment">## ['trek', 'cannondale', 'specialized']</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="遍历整个列表"><a href="#遍历整个列表" class="headerlink" title="遍历整个列表"></a>遍历整个列表</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bicycles = [<span class="string">'trek'</span>, <span class="string">'cannondale'</span>, <span class="string">'specialized'</span>]</span><br><span class="line"><span class="keyword">for</span> bicycle <span class="keyword">in</span> bicycles:</span><br><span class="line">    print(bicycle)</span><br><span class="line"></span><br><span class="line"><span class="comment">##  trek</span></span><br><span class="line"><span class="comment">##  cannondale</span></span><br><span class="line"><span class="comment">##  specialized</span></span><br></pre></td></tr></table></figure>
+
+<p>上面这段代码，我们定义了一个for循环，这行代码让Python从列表bicycles中取出一个名字，并将其存储在bicycle中。然后将其打印出来。输出其中的所有的名字。</p>
+<h1 id="创建数值列表"><a href="#创建数值列表" class="headerlink" title="创建数值列表"></a>创建数值列表</h1><h2 id="使用函数range"><a href="#使用函数range" class="headerlink" title="使用函数range()"></a>使用函数range()</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> value <span class="keyword">in</span> range(<span class="number">1</span>, <span class="number">5</span>):</span><br><span class="line">    print(value)</span><br><span class="line"></span><br><span class="line"><span class="comment">## 1</span></span><br><span class="line"><span class="comment">## 2</span></span><br><span class="line"><span class="comment">## 3</span></span><br><span class="line"><span class="comment">## 4</span></span><br></pre></td></tr></table></figure>
+
+<p>这个示例打印了1—4，这里不包含5.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">numbers = list(range(<span class="number">2</span>, <span class="number">11</span>, <span class="number">2</span>))</span><br><span class="line">print(numbers)</span><br><span class="line"></span><br><span class="line"><span class="comment">## [2, 4, 6, 8, 10]</span></span><br></pre></td></tr></table></figure>
+
+<p>这个示例表示创建列表，列表从2开始，然后不断加2，直到达到或超过最终值，因此最后一个输出结果为10.</p>
+<h1 id="切片"><a href="#切片" class="headerlink" title="切片"></a>切片</h1><p>要创建切片，可以指定要使用的第一个元素和最后一个元素的索引。例如：要输出列表的前三个元素，可指定索引0:3.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">bicycles = [<span class="string">'trek'</span>, <span class="string">'cannondale'</span>, <span class="string">'specialized'</span>, <span class="string">'qin'</span>]</span><br><span class="line"><span class="keyword">for</span> bicycle <span class="keyword">in</span> bicycles[<span class="number">0</span>:<span class="number">3</span>]:</span><br><span class="line">    print(bicycle)</span><br><span class="line"></span><br><span class="line"><span class="comment">## trek</span></span><br><span class="line"><span class="comment">## cannondale</span></span><br><span class="line"><span class="comment">## specialized</span></span><br></pre></td></tr></table></figure>
+
+<p>上面的例子中使用for循环遍历了bicycles列表中的前三个元素，切片可以指定列表中的任意位置。</p>
+<h1 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h1><p>列表非常适用于存储在程序运行期间可能变化的数据集。列表是可以修改的，这对处理网站的用户列表至关重要。然而，有时候需要创建一系列不可修改的元素，元组可以实现这种操作。</p>
+<p><strong>元组的定义方法是圆括号 ()</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dimensions = (<span class="number">200</span>, <span class="number">50</span>)</span><br><span class="line">print(dimensions[<span class="number">0</span>])</span><br><span class="line">print(dimensions[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">## 200</span></span><br><span class="line"><span class="comment">## 50</span></span><br></pre></td></tr></table></figure>
+
+<p>元组的值不可修改</p>
+<p><code>dimensions[0] = 250</code></p>
+<p>这句话会报错。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Traceback (most recent call last):</span><br><span class="line">  File <span class="string">"D:/Program Files (x86)/PychramProjects/python/python_space.py"</span>, line <span class="number">48</span>, <span class="keyword">in</span> &lt;module&gt;</span><br><span class="line">    dimensions[<span class="number">0</span>] = <span class="number">250</span></span><br><span class="line">TypeError: <span class="string">'tuple'</span> object does <span class="keyword">not</span> support item assignment</span><br></pre></td></tr></table></figure>
+
+<p><strong>虽然不能修改元组的元素的值，但是可以给存储的元组的变量赋值。因此，如果要修改前诉矩阵的尺寸，可以重新定义整个元组</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">dimensions = (<span class="number">200</span>, <span class="number">50</span>)</span><br><span class="line">print(dimensions[<span class="number">0</span>])</span><br><span class="line">print(dimensions[<span class="number">1</span>])</span><br><span class="line">dimensions = (<span class="number">400</span>, <span class="number">200</span>)</span><br><span class="line">print(dimensions[<span class="number">0</span>])</span><br><span class="line">print(dimensions[<span class="number">1</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">## 200</span></span><br><span class="line"><span class="comment">## 50</span></span><br><span class="line"><span class="comment">## 400</span></span><br><span class="line"><span class="comment">## 200</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="字典（与-Json类似）"><a href="#字典（与-Json类似）" class="headerlink" title="字典（与 Json类似）"></a>字典（与 Json类似）</h1><p>在python中，字典是一系列键—值对。每个键都与一个值相对应，可以使用键来访问值。和C++中的map很相似。下面是一个简单的字典。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 字典的练习</span></span><br><span class="line">alien_0 = &#123;<span class="string">'color'</span>: <span class="string">'green'</span>, <span class="string">'points'</span>: <span class="string">'5'</span>&#125;</span><br><span class="line">print(alien_0[<span class="string">'color'</span>])</span><br><span class="line">print(alien_0[<span class="string">'points'</span>])</span><br><span class="line"></span><br><span class="line"><span class="comment">## green</span></span><br><span class="line"><span class="comment">## 5</span></span><br></pre></td></tr></table></figure>
+
+<p>同时，也可以在已经建好的字典里面添加键值对。例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">alien_0 = &#123;<span class="string">'color'</span>: <span class="string">'green'</span>, <span class="string">'points'</span>: <span class="string">'5'</span>&#125;</span><br><span class="line">print(alien_0)</span><br><span class="line">alien_0[<span class="string">'x_position'</span>] = <span class="number">0</span></span><br><span class="line">alien_0[<span class="string">'y_position'</span>] = <span class="number">25</span></span><br><span class="line">print(alien_0)</span><br><span class="line"></span><br><span class="line"><span class="comment">## &#123;'color': 'green', 'points': '5'&#125;</span></span><br><span class="line"><span class="comment">## &#123;'color': 'green', 'points': '5', 'x_position': 0, 'y_position': 25&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>字典中的值是可以修改的。</strong></p>
+<h3 id="使用-del-函数删除键值对"><a href="#使用-del-函数删除键值对" class="headerlink" title="使用 del 函数删除键值对"></a>使用 del 函数删除键值对</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">del</span> alien_0[<span class="string">'points'</span>]</span><br></pre></td></tr></table></figure>
+
+<h2 id="还有各种嵌套结构，多层嵌套，列表套列表，列表套元组，字典套字典等等等等，在这里就不过多赘述了，原理是一样的。"><a href="#还有各种嵌套结构，多层嵌套，列表套列表，列表套元组，字典套字典等等等等，在这里就不过多赘述了，原理是一样的。" class="headerlink" title="还有各种嵌套结构，多层嵌套，列表套列表，列表套元组，字典套字典等等等等，在这里就不过多赘述了，原理是一样的。"></a>还有各种嵌套结构，多层嵌套，列表套列表，列表套元组，字典套字典等等等等，在这里就不过多赘述了，原理是一样的。</h2><h1 id="python"><a href="#python" class="headerlink" title="python"></a>python</h1>
             </div>
             <hr/>
 
@@ -504,7 +608,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://yoursite.com/2020/05/24/hello-world/">http://yoursite.com/2020/05/24/hello-world/</a>
+                    <a href="http://yoursite.com/2020/05/24/python%E5%9F%BA%E7%A1%80/">http://yoursite.com/2020/05/24/python%E5%9F%BA%E7%A1%80/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -541,7 +645,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            
+                                <a href="/tags/python/">
+                                    <span class="chip bg-color">python</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -707,9 +815,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/2020/05/24/python%E5%9F%BA%E7%A1%80/">
                     <div class="card-image">
@@ -747,9 +856,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-05-24
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-24
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -758,6 +867,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -773,7 +883,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2020/05/24/hello-world/">
@@ -803,7 +913,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
