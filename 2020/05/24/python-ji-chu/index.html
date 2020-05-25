@@ -2,6 +2,15 @@
 <html lang="en">
 
 
+
+    <script type="text/javascript">
+        var windowWidth = $(window).width();
+        if (windowWidth > 768) { 
+            document.write('<script type="text/javascript" src="/js/xuehuapiaoluo.js"></script>'); 
+        }
+    </script>
+
+
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="python基础, Optimist">
@@ -31,7 +40,6 @@
 
 <meta name="generator" content="Hexo 4.2.1"><link rel="alternate" href="/atom.xml" title="Optimist" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
-
 
 <body>
     <header class="navbar-fixed">
@@ -820,6 +828,33 @@
     </div>
 
     
+        <link rel="stylesheet" href="/libs/gitalk/gitalk.css">
+<link rel="stylesheet" href="/css/my-gitalk.css">
+
+<div class="card gitalk-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="gitalk-container" class="card-content"></div>
+</div>
+
+<script src="/libs/gitalk/gitalk.min.js"></script>
+<script>
+    let gitalk = new Gitalk({
+        clientID: '',
+        clientSecret: '',
+        repo: 'optimistqaq.github.io',
+        owner: 'Mercy',
+        admin: null,
+        id: '2020-05-24T22-36-42',
+        distractionFreeMode: false  // Facebook-like distraction free mode
+    });
+
+    gitalk.render('gitalk-container');
+</script>
+
+    
 
     
 
@@ -1267,6 +1302,6 @@ $(function () {
     <script src="/libs/instantpage/instantpage.js" type="module"></script>
     
 
-</body>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"display":{"position":"right","width":150,"height":300},"mobile":{"show":false},"react":{"opacity":0.7},"jsonPath":"/live2dw/assets/shizuku.model.json"}});</script></body>
 
 </html>
