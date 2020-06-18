@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://optimistqaq.github.io/"/>
-  <updated>2020-06-10T08:09:42.336Z</updated>
+  <updated>2020-06-18T15:26:06.348Z</updated>
   <id>https://optimistqaq.github.io/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Pandas学习笔记</title>
+    <link href="https://optimistqaq.github.io/2020/06/18/pandas-xue-xi-bi-ji/"/>
+    <id>https://optimistqaq.github.io/2020/06/18/pandas-xue-xi-bi-ji/</id>
+    <published>2020-06-18T15:08:25.000Z</published>
+    <updated>2020-06-18T15:26:06.348Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;python的强大正是因为这些库函数的存在，因此学好这些库函数至关重要，尤其是想要学习机器学习的人。&lt;/p&gt;
+&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h2 id=&quot;Pandas方法&quot;&gt;&lt;a href=&quot;#Pandas方法&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="python" scheme="https://optimistqaq.github.io/tags/python/"/>
+    
+      <category term="Machine Learning" scheme="https://optimistqaq.github.io/tags/Machine-Learning/"/>
+    
+  </entry>
   
   <entry>
     <title>python基础</title>
