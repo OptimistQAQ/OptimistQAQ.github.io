@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Pandas学习笔记, Optimist">
+    <meta name="keywords" content="Java 基础知识(1), Optimist">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Pandas学习笔记 | Optimist</title>
+    <title>Java 基础知识(1) | Optimist</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -287,12 +287,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Pandas学习笔记</h1>
+                    <h1 class="description center-align post-title">Java 基础知识(1)</h1>
                 </div>
             </div>
         </div>
@@ -417,12 +417,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
-                            </a>
-                        
-                            <a href="/tags/Machine-Learning/">
-                                <span class="chip bg-color">Machine Learning</span>
+                            <a href="/tags/Java/">
+                                <span class="chip bg-color">Java</span>
                             </a>
                         
                     </div>
@@ -437,7 +433,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
-                    2020-06-18
+                    2020-06-19
                 </div>
                 
 
@@ -451,14 +447,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>Word Count:&nbsp;&nbsp;
-                    518
+                    750
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>Read Times:&nbsp;&nbsp;
-                    2 Min
+                    3 Min
                 </div>
                 
 
@@ -474,82 +470,137 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>[TOC]</p>
-<h2 id="Pandas方法"><a href="#Pandas方法" class="headerlink" title="Pandas方法"></a>Pandas方法</h2><p>使用pandas首先要导入pandas包。</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd  <span class="token operator">//</span>标准的导入pandas的代码</code></pre>
-<h3 id="读入csv文件"><a href="#读入csv文件" class="headerlink" title="读入csv文件"></a>读入csv文件</h3><pre class=" language-python"><code class="language-python">trainData <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">"./Data/train.csv"</span><span class="token punctuation">)</span> <span class="token operator">//</span>
-<span class="token punctuation">.</span><span class="token operator">/</span>Data<span class="token operator">/</span>   表示路径，train表示文件名</code></pre>
-<h3 id="标题获取文件中的前5行数据"><a href="#标题获取文件中的前5行数据" class="headerlink" title="标题获取文件中的前5行数据"></a>标题获取文件中的前5行数据</h3><pre class=" language-python"><code class="language-python">trainData<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">//</span>
-<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span>是pandas中的一个方法，可以获取文件中的前<span class="token number">5</span>行数据</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20190521193906796.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzg5NTQ4Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h3 id="info-迅速获取数据描述"><a href="#info-迅速获取数据描述" class="headerlink" title="info() 迅速获取数据描述"></a>info() 迅速获取数据描述</h3><pre class=" language-python"><code class="language-python">trainData<span class="token punctuation">.</span>info<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token operator">//</span> 方法就不具体介绍了   下面给出运行结果
-
-<span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span>    运行结果
-<span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'pandas.core.frame.DataFrame'</span><span class="token operator">></span>
-RangeIndex<span class="token punctuation">:</span> <span class="token number">891</span> entries<span class="token punctuation">,</span> <span class="token number">0</span> to <span class="token number">890</span>
-Data columns <span class="token punctuation">(</span>total <span class="token number">10</span> columns<span class="token punctuation">)</span><span class="token punctuation">:</span>
-Pclass      <span class="token number">891</span> non<span class="token operator">-</span>null int64
-Name        <span class="token number">891</span> non<span class="token operator">-</span>null object
-Sex         <span class="token number">891</span> non<span class="token operator">-</span>null object
-Age         <span class="token number">714</span> non<span class="token operator">-</span>null float64
-SibSp       <span class="token number">891</span> non<span class="token operator">-</span>null int64
-Parch       <span class="token number">891</span> non<span class="token operator">-</span>null int64
-Ticket      <span class="token number">891</span> non<span class="token operator">-</span>null object
-Fare        <span class="token number">891</span> non<span class="token operator">-</span>null float64
-Cabin       <span class="token number">204</span> non<span class="token operator">-</span>null object
-Embarked    <span class="token number">889</span> non<span class="token operator">-</span>null object
-dtypes<span class="token punctuation">:</span> float64<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> int64<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> object<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
-memory usage<span class="token punctuation">:</span> <span class="token number">69.7</span><span class="token operator">+</span> KB</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20190915110156432.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzg5NTQ4Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h3 id="drop"><a href="#drop" class="headerlink" title=".drop( , , )"></a>.drop( , , )</h3><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#删除name</span>
-allData<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token string">"Name"</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>  <span class="token operator">//</span>
-第一个参数为要删除的内容，第二第三个参数的形式固定</code></pre>
-<h3 id="替换文件中的内容"><a href="#替换文件中的内容" class="headerlink" title="替换文件中的内容"></a>替换文件中的内容</h3><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#可以考虑替换为出现的次数</span>
-allData<span class="token punctuation">[</span><span class="token string">'SibSp'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token operator">//</span> 
-替换SibSp中缺失的数据为出现的次数
-
-<span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span><span class="token operator">/</span>运行结果
-<span class="token number">0</span>    <span class="token number">891</span>
-<span class="token number">1</span>    <span class="token number">319</span>
-<span class="token number">2</span>     <span class="token number">42</span>
-<span class="token number">4</span>     <span class="token number">22</span>
-<span class="token number">3</span>     <span class="token number">20</span>
-<span class="token number">8</span>      <span class="token number">9</span>
-<span class="token number">5</span>      <span class="token number">6</span>
-Name<span class="token punctuation">:</span> SibSp<span class="token punctuation">,</span> dtype<span class="token punctuation">:</span> int64</code></pre>
-<h3 id="合并两个文件中的内容"><a href="#合并两个文件中的内容" class="headerlink" title="合并两个文件中的内容"></a>合并两个文件中的内容</h3><pre class=" language-python"><code class="language-python">allData <span class="token operator">=</span> pd<span class="token punctuation">.</span>concat<span class="token punctuation">(</span><span class="token punctuation">[</span>trainData<span class="token punctuation">,</span>testData<span class="token punctuation">]</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>ignore_index<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>  
-<span class="token operator">//</span>第一个参数为两个文件名，第二第三个参数格式相同</code></pre>
-<h3 id="pd-set-option-设置指定的值"><a href="#pd-set-option-设置指定的值" class="headerlink" title="pd.set_option() 设置指定的值"></a>pd.set_option() 设置指定的值</h3><pre class=" language-python"><code class="language-python">pd<span class="token punctuation">.</span>setoption<span class="token punctuation">(</span><span class="token string">'max_rows'</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">)</span>  <span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span>设置最大的行数</code></pre>
-<h3 id="value-counts-获取每个值出现的次数"><a href="#value-counts-获取每个值出现的次数" class="headerlink" title="value_counts()   获取每个值出现的次数"></a>value_counts()   获取每个值出现的次数</h3><pre class=" language-python"><code class="language-python">trainData<span class="token punctuation">[</span><span class="token string">'Pclass'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-<h3 id="fillna-用指定方法填充"><a href="#fillna-用指定方法填充" class="headerlink" title="fillna()   用指定方法填充"></a>fillna()   用指定方法填充</h3><pre class=" language-python"><code class="language-python">age <span class="token operator">=</span> trainData<span class="token punctuation">[</span><span class="token string">'Age'</span><span class="token punctuation">]</span>
-age <span class="token operator">=</span> age<span class="token punctuation">.</span>fillna<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>   <span class="token operator">//</span><span class="token operator">//</span>将年龄用<span class="token number">0</span>来填充</code></pre>
-<h3 id="客串seaborn中的一个方法-distplot-age-画出age的树状图"><a href="#客串seaborn中的一个方法-distplot-age-画出age的树状图" class="headerlink" title="客串seaborn中的一个方法  distplot(age)  画出age的树状图"></a>客串seaborn中的一个方法  distplot(age)  画出age的树状图</h3><pre class=" language-python"><code class="language-python">sns<span class="token punctuation">.</span>distplot<span class="token punctuation">(</span>age<span class="token punctuation">)</span></code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20190915112502222.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzg5NTQ4Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h3 id="describe-简要显示数据的数字特征"><a href="#describe-简要显示数据的数字特征" class="headerlink" title="describe()  简要显示数据的数字特征"></a>describe()  简要显示数据的数字特征</h3><pre class=" language-python"><code class="language-python">allData<span class="token punctuation">[</span><span class="token string">'Fare'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>describe<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20190915113352696.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzg5NTQ4Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<pre><code>### ~corr() 计算相关系数</code></pre><ul>
-<li>method：可选{‘pearson’, ‘kendall’, ‘spearman’}<ul>
-<li>pearson: standard correlation coefficient</li>
-<li>kendall: Kendall Tau correlation coefficient</li>
-<li>spearman: Spearman rank correlation</li>
+<h1 id="面向对象基础知识（一）"><a href="#面向对象基础知识（一）" class="headerlink" title="面向对象基础知识（一）"></a>面向对象基础知识（一）</h1><ul>
+<li><blockquote>
+<p>类与对象</p>
+<ul>
+<li>定义一个自己的类</li>
+<li>使用类——在主类中使用Book类</li>
 </ul>
+</blockquote>
 </li>
-<li>min_periods： Minimum number of observations required per pair of columns to have a valid result. Currently only available for pearson and spearman correlation </li>
 </ul>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 计算标准相关系数</span>
-corr_matrix <span class="token operator">=</span> housing<span class="token punctuation">.</span>corr<span class="token punctuation">(</span><span class="token punctuation">)</span>
-corr_matrix<span class="token punctuation">[</span><span class="token string">"median_house_value"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>sort_values<span class="token punctuation">(</span>ascending<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true">#输出：</span>
-<span class="token comment" spellcheck="true"># median_house_value    1.000000</span>
-<span class="token comment" spellcheck="true"># median_income         0.687160</span>
-<span class="token comment" spellcheck="true"># total_rooms           0.135097</span>
-<span class="token comment" spellcheck="true"># housing_median_age    0.114110</span>
-<span class="token comment" spellcheck="true"># households            0.064506</span>
-<span class="token comment" spellcheck="true"># total_bedrooms        0.047689</span>
-<span class="token comment" spellcheck="true"># population           -0.026920</span>
-<span class="token comment" spellcheck="true"># longitude            -0.047432</span>
-<span class="token comment" spellcheck="true"># latitude             -0.142724</span>
-<span class="token comment" spellcheck="true"># Name: median_house_value, dtype: float64</span></code></pre>
+<h2 id="类与对象"><a href="#类与对象" class="headerlink" title="类与对象"></a>类与对象</h2><h3 id="自定义的类"><a href="#自定义的类" class="headerlink" title="自定义的类"></a>自定义的类</h3><ul>
+<li><strong>通过class标识符进行声明</strong></li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Book</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 定义一个新的类</span>
+    String title<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 书的名字</span>
+    <span class="token keyword">double</span> price<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 书的价格</span>
+    <span class="token comment" spellcheck="true">/**
+     * 输出对象完整信息
+     */</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 此方法将由对象调用</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"图书名称："</span> <span class="token operator">+</span> title <span class="token operator">+</span> <span class="token string">"，价格："</span> <span class="token operator">+</span> price<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="在主类中使用类"><a href="#在主类中使用类" class="headerlink" title="在主类中使用类"></a>在主类中使用类</h3><ul>
+<li><strong>在主类中使用Book类</strong></li>
+</ul>
+<pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Book</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 定义一个新的类</span>
+    String title<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 书的名字</span>
+    <span class="token keyword">double</span> price<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 书的价格</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 此方法将由对象调用</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"图书名称："</span> <span class="token operator">+</span> title <span class="token operator">+</span> <span class="token string">"，价格："</span> <span class="token operator">+</span> price<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestDemo</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Book bk <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Book</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 声明并实例化对象</span>
+        bk<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">"Java开发"</span> <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 操作属性内容</span>
+        bk<span class="token punctuation">.</span>price <span class="token operator">=</span> <span class="token number">89.9</span> <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 操作属性内容</span>
+        bk<span class="token punctuation">.</span><span class="token function">getInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 调用类中的getInfo()方法</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="以分步式的方式实例化对象"><a href="#以分步式的方式实例化对象" class="headerlink" title="以分步式的方式实例化对象"></a>以分步式的方式实例化对象</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestDemo</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Book bk <span class="token operator">=</span> null<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 声明对象</span>
+        bk <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Book</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 实例化对象（开辟了堆内存）</span>
+        bk<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">"Java开发"</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 操作属性内容</span>
+        bk<span class="token punctuation">.</span>price <span class="token operator">=</span> <span class="token number">89.9</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 操作属性内容</span>
+        bk<span class="token punctuation">.</span><span class="token function">getInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 调用类中的getInfo()方法</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h2 id="封装性初步分析"><a href="#封装性初步分析" class="headerlink" title="封装性初步分析"></a>封装性初步分析</h2><h3 id="没有封装的代码"><a href="#没有封装的代码" class="headerlink" title="没有封装的代码"></a>没有封装的代码</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Book</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 定义一个新的类</span>
+    String title<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 书的名字</span>
+    <span class="token keyword">double</span> price<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 书的价格</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 此方法将由对象调用</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"图书名称："</span> <span class="token operator">+</span> title <span class="token operator">+</span> <span class="token string">"，价格："</span> <span class="token operator">+</span> price<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestDemo</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Book book <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Book</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 声明并实例化对象</span>
+        book<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">"Java开发"</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 设置属性内容</span>
+        book<span class="token punctuation">.</span>price <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">89.9</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 设置属性内容</span>
+        book<span class="token punctuation">.</span><span class="token function">getInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 调用方法</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h3 id="使用private封装属性"><a href="#使用private封装属性" class="headerlink" title="使用private封装属性"></a>使用private封装属性</h3><pre class=" language-java"><code class="language-java"><span class="token keyword">class</span> <span class="token class-name">Book</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 定义一个新的类</span>
+    <span class="token keyword">private</span> String title<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 书的名字</span>
+    <span class="token keyword">private</span> <span class="token keyword">double</span> price<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 书的价格</span>
+    <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 此方法将由对象调用</span>
+        System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"图书名称："</span> <span class="token operator">+</span> title <span class="token operator">+</span> <span class="token string">"，价格："</span> <span class="token operator">+</span> price<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestDemo</span> <span class="token punctuation">{</span>
+    <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        Book book <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Book</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 声明并实例化对象</span>
+        book<span class="token punctuation">.</span>title <span class="token operator">=</span> <span class="token string">"Java开发"</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 设置属性内容</span>
+        book<span class="token punctuation">.</span>price <span class="token operator">=</span> <span class="token operator">-</span><span class="token number">89.9</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 设置属性内容</span>
+        book<span class="token punctuation">.</span><span class="token function">getInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 调用方法</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span></code></pre>
+<h2 id="为封装属性设置取数据操作"><a href="#为封装属性设置取数据操作" class="headerlink" title="为封装属性设置取数据操作"></a>为封装属性设置取数据操作</h2><ul>
+<li>为Book类中的封装属性设置setter、getter操作</li>
+</ul>
+<pre class=" language-java"><code class="language-java"> <span class="token keyword">class</span> <span class="token class-name">Book</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 定义一个新的类</span>
+     <span class="token keyword">private</span> String title<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 书的名字</span>
+     <span class="token keyword">private</span> <span class="token keyword">double</span> price<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 书的价格</span>
+     <span class="token comment" spellcheck="true">/**
+      * 设置或修改title属性内容
+      * @param t 接收要设置的数据
+      */</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setTitle</span><span class="token punctuation">(</span>String t<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 设置title属性内容</span>
+         title <span class="token operator">=</span> t<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+     <span class="token comment" spellcheck="true">/**
+      * 设置或修改price属性内容
+      * @param p 接收要设置的数据
+      */</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">setPrice</span><span class="token punctuation">(</span><span class="token keyword">double</span> p<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 设置price属性内容</span>
+         <span class="token keyword">if</span> <span class="token punctuation">(</span>p <span class="token operator">></span> <span class="token number">0.0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 进行数据验证</span>
+            price <span class="token operator">=</span> p <span class="token punctuation">;</span>
+         <span class="token punctuation">}</span>
+     <span class="token punctuation">}</span>
+     <span class="token comment" spellcheck="true">/**
+      * 取得title属性内容
+      * @return title属性数据
+      */</span>
+     <span class="token keyword">public</span> String <span class="token function">getTitle</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 取得title属性内容</span>
+         <span class="token keyword">return</span> title<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+     <span class="token comment" spellcheck="true">/**
+      * 取得price属性内容
+      * @return price属性数据
+      */</span>
+     <span class="token keyword">public</span> <span class="token keyword">double</span> <span class="token function">getPrice</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 取得price属性内容</span>
+         <span class="token keyword">return</span> price<span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+     <span class="token comment" spellcheck="true">/**
+      * 输出对象完整信息
+      */</span>
+     <span class="token keyword">public</span> <span class="token keyword">void</span> <span class="token function">getInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 此方法将由对象调用</span>
+         System<span class="token punctuation">.</span>out<span class="token punctuation">.</span><span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"图书名称："</span> <span class="token operator">+</span> title <span class="token operator">+</span> <span class="token string">"，价格："</span> <span class="token operator">+</span> price<span class="token punctuation">)</span><span class="token punctuation">;</span>
+     <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span>
+ <span class="token keyword">public</span> <span class="token keyword">class</span> <span class="token class-name">TestDemo</span> <span class="token punctuation">{</span>
+     <span class="token keyword">public</span> <span class="token keyword">static</span> <span class="token keyword">void</span> <span class="token function">main</span><span class="token punctuation">(</span>String args<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+         Book book <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">Book</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 声明并实例化对象</span>
+         book<span class="token punctuation">.</span><span class="token function">setTitle</span><span class="token punctuation">(</span><span class="token string">"Java开发"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 设置属性内容</span>
+         book<span class="token punctuation">.</span><span class="token function">setPrice</span><span class="token punctuation">(</span><span class="token operator">-</span><span class="token number">89.9</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 设置属性内容</span>
+         book<span class="token punctuation">.</span><span class="token function">getInfo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 调用方法</span>
+     <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span></code></pre>
 
             </div>
             <hr/>
@@ -575,7 +626,7 @@ corr_matrix<span class="token punctuation">[</span><span class="token string">"m
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://optimistqaq.github.io/2020/06/18/pandas-xue-xi-bi-ji/">https://optimistqaq.github.io/2020/06/18/pandas-xue-xi-bi-ji/</a>
+                    <a href="https://optimistqaq.github.io/2020/06/19/java-ji-chu-zhi-shi-1/">https://optimistqaq.github.io/2020/06/19/java-ji-chu-zhi-shi-1/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -613,12 +664,8 @@ corr_matrix<span class="token punctuation">[</span><span class="token string">"m
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
-                                </a>
-                            
-                                <a href="/tags/Machine-Learning/">
-                                    <span class="chip bg-color">Machine Learning</span>
+                                <a href="/tags/Java/">
+                                    <span class="chip bg-color">Java</span>
                                 </a>
                             
                         </div>
@@ -786,9 +833,56 @@ corr_matrix<span class="token punctuation">[</span><span class="token string">"m
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
+            <div class="card">
+                <a href="/2020/06/19/java-ji-chu-zhi-shi-1/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="Java 基础知识(1)">
+                        
+                        <span class="card-title">Java 基础知识(1)</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Java是一门面向对象的语言，学好Java受益终身。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-19
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Optimist
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                Next&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2020/06/19/numpy-xue-xi-bi-ji/">
                     <div class="card-image">
@@ -806,9 +900,9 @@ corr_matrix<span class="token punctuation">[</span><span class="token string">"m
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-06-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -826,54 +920,6 @@ corr_matrix<span class="token punctuation">[</span><span class="token string">"m
                     
                     <a href="/tags/Machine-Learning/">
                         <span class="chip bg-color">Machine Learning</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Next&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2020/05/24/python-ji-chu/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="python基础">
-                        
-                        <span class="card-title">python基础</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            列表[TOC]
-列表是什么？列表由一系列特定顺序排列的元素组成的。在python中用 [] 来表示列表，并用 , 来分隔其中的元素。
-bicycles = ['trek', 'cannondale', 'specialized']
-prin
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-24
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            Mercy
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
