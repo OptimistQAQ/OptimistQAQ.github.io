@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://optimistqaq.github.io/"/>
-  <updated>2020-06-18T15:26:06.348Z</updated>
+  <updated>2020-06-19T07:24:40.162Z</updated>
   <id>https://optimistqaq.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Numpy学习笔记</title>
+    <link href="https://optimistqaq.github.io/2020/06/19/numpy-xue-xi-bi-ji/"/>
+    <id>https://optimistqaq.github.io/2020/06/19/numpy-xue-xi-bi-ji/</id>
+    <published>2020-06-19T07:15:50.000Z</published>
+    <updated>2020-06-19T07:24:40.162Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h1 id=&quot;Numpy方法&quot;&gt;&lt;a href=&quot;#Numpy方法&quot; class=&quot;headerlink&quot; title=&quot;Numpy方法&quot;&gt;&lt;/a&gt;Numpy方法&lt;/h1&gt;&lt;h3 id=&quot;np-ceil-x-y-限制元素范围&quot;&gt;&lt;a
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="python" scheme="https://optimistqaq.github.io/tags/python/"/>
+    
+      <category term="Machine Learning" scheme="https://optimistqaq.github.io/tags/Machine-Learning/"/>
+    
+  </entry>
   
   <entry>
     <title>Pandas学习笔记</title>
