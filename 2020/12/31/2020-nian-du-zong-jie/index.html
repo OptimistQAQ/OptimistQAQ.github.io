@@ -5,7 +5,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Pandas学习笔记, Optimist">
+    <meta name="keywords" content="2020年度总结, Optimist">
     <meta name="description" content="从来没有真正的绝境, 只有心灵的迷途">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -17,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Pandas学习笔记 | Optimist</title>
+    <title>2020年度总结 | Optimist</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -287,12 +287,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://s3.ax1x.com/2020/12/31/rvpczd.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Pandas学习笔记</h1>
+                    <h1 class="description center-align post-title">2020年度总结</h1>
                 </div>
             </div>
         </div>
@@ -417,12 +417,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/python/">
-                                <span class="chip bg-color">python</span>
-                            </a>
-                        
-                            <a href="/tags/Machine-Learning/">
-                                <span class="chip bg-color">Machine Learning</span>
+                            <a href="/tags/%E6%9D%82%E8%AE%B0/">
+                                <span class="chip bg-color">杂记</span>
                             </a>
                         
                     </div>
@@ -437,28 +433,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-06-18
+                    2020-12-31
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-06-19
+                    2020-12-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    518
+                    2.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    7 分
                 </div>
                 
 
@@ -474,83 +470,33 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>[TOC]</p>
-<h2 id="Pandas方法"><a href="#Pandas方法" class="headerlink" title="Pandas方法"></a>Pandas方法</h2><p>使用pandas首先要导入pandas包。</p>
-<pre class=" language-python"><code class="language-python"><span class="token keyword">import</span> pandas <span class="token keyword">as</span> pd  <span class="token operator">//</span>标准的导入pandas的代码</code></pre>
-<h3 id="读入csv文件"><a href="#读入csv文件" class="headerlink" title="读入csv文件"></a>读入csv文件</h3><pre class=" language-python"><code class="language-python">trainData <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span><span class="token string">"./Data/train.csv"</span><span class="token punctuation">)</span> <span class="token operator">//</span>
-<span class="token punctuation">.</span><span class="token operator">/</span>Data<span class="token operator">/</span>   表示路径，train表示文件名</code></pre>
-<h3 id="标题获取文件中的前5行数据"><a href="#标题获取文件中的前5行数据" class="headerlink" title="标题获取文件中的前5行数据"></a>标题获取文件中的前5行数据</h3><pre class=" language-python"><code class="language-python">trainData<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">//</span>
-<span class="token punctuation">.</span>head<span class="token punctuation">(</span><span class="token punctuation">)</span>是pandas中的一个方法，可以获取文件中的前<span class="token number">5</span>行数据</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20190521193906796.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzg5NTQ4Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h3 id="info-迅速获取数据描述"><a href="#info-迅速获取数据描述" class="headerlink" title="info() 迅速获取数据描述"></a>info() 迅速获取数据描述</h3><pre class=" language-python"><code class="language-python">trainData<span class="token punctuation">.</span>info<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token operator">//</span> 方法就不具体介绍了   下面给出运行结果
-
-<span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span>    运行结果
-<span class="token operator">&lt;</span><span class="token keyword">class</span> <span class="token string">'pandas.core.frame.DataFrame'</span><span class="token operator">></span>
-RangeIndex<span class="token punctuation">:</span> <span class="token number">891</span> entries<span class="token punctuation">,</span> <span class="token number">0</span> to <span class="token number">890</span>
-Data columns <span class="token punctuation">(</span>total <span class="token number">10</span> columns<span class="token punctuation">)</span><span class="token punctuation">:</span>
-Pclass      <span class="token number">891</span> non<span class="token operator">-</span>null int64
-Name        <span class="token number">891</span> non<span class="token operator">-</span>null object
-Sex         <span class="token number">891</span> non<span class="token operator">-</span>null object
-Age         <span class="token number">714</span> non<span class="token operator">-</span>null float64
-SibSp       <span class="token number">891</span> non<span class="token operator">-</span>null int64
-Parch       <span class="token number">891</span> non<span class="token operator">-</span>null int64
-Ticket      <span class="token number">891</span> non<span class="token operator">-</span>null object
-Fare        <span class="token number">891</span> non<span class="token operator">-</span>null float64
-Cabin       <span class="token number">204</span> non<span class="token operator">-</span>null object
-Embarked    <span class="token number">889</span> non<span class="token operator">-</span>null object
-dtypes<span class="token punctuation">:</span> float64<span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> int64<span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">,</span> object<span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span>
-memory usage<span class="token punctuation">:</span> <span class="token number">69.7</span><span class="token operator">+</span> KB</code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20190915110156432.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzg5NTQ4Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h3 id="drop"><a href="#drop" class="headerlink" title=".drop( , , )"></a>.drop( , , )</h3><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#删除name</span>
-allData<span class="token punctuation">.</span>drop<span class="token punctuation">(</span><span class="token string">"Name"</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>inplace<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>  <span class="token operator">//</span>
-第一个参数为要删除的内容，第二第三个参数的形式固定</code></pre>
-<h3 id="替换文件中的内容"><a href="#替换文件中的内容" class="headerlink" title="替换文件中的内容"></a>替换文件中的内容</h3><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#可以考虑替换为出现的次数</span>
-allData<span class="token punctuation">[</span><span class="token string">'SibSp'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span>   <span class="token operator">//</span> 
-替换SibSp中缺失的数据为出现的次数
-
-<span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span><span class="token operator">/</span>运行结果
-<span class="token number">0</span>    <span class="token number">891</span>
-<span class="token number">1</span>    <span class="token number">319</span>
-<span class="token number">2</span>     <span class="token number">42</span>
-<span class="token number">4</span>     <span class="token number">22</span>
-<span class="token number">3</span>     <span class="token number">20</span>
-<span class="token number">8</span>      <span class="token number">9</span>
-<span class="token number">5</span>      <span class="token number">6</span>
-Name<span class="token punctuation">:</span> SibSp<span class="token punctuation">,</span> dtype<span class="token punctuation">:</span> int64</code></pre>
-<h3 id="合并两个文件中的内容"><a href="#合并两个文件中的内容" class="headerlink" title="合并两个文件中的内容"></a>合并两个文件中的内容</h3><pre class=" language-python"><code class="language-python">allData <span class="token operator">=</span> pd<span class="token punctuation">.</span>concat<span class="token punctuation">(</span><span class="token punctuation">[</span>trainData<span class="token punctuation">,</span>testData<span class="token punctuation">]</span><span class="token punctuation">,</span>axis<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span>ignore_index<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>  
-<span class="token operator">//</span>第一个参数为两个文件名，第二第三个参数格式相同</code></pre>
-<h3 id="pd-set-option-设置指定的值"><a href="#pd-set-option-设置指定的值" class="headerlink" title="pd.set_option() 设置指定的值"></a>pd.set_option() 设置指定的值</h3><pre class=" language-python"><code class="language-python">pd<span class="token punctuation">.</span>setoption<span class="token punctuation">(</span><span class="token string">'max_rows'</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">)</span>  <span class="token operator">//</span><span class="token operator">//</span><span class="token operator">//</span>设置最大的行数</code></pre>
-<h3 id="value-counts-获取每个值出现的次数"><a href="#value-counts-获取每个值出现的次数" class="headerlink" title="value_counts()   获取每个值出现的次数"></a>value_counts()   获取每个值出现的次数</h3><pre class=" language-python"><code class="language-python">trainData<span class="token punctuation">[</span><span class="token string">'Pclass'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>value_counts<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-<h3 id="fillna-用指定方法填充"><a href="#fillna-用指定方法填充" class="headerlink" title="fillna()   用指定方法填充"></a>fillna()   用指定方法填充</h3><pre class=" language-python"><code class="language-python">age <span class="token operator">=</span> trainData<span class="token punctuation">[</span><span class="token string">'Age'</span><span class="token punctuation">]</span>
-age <span class="token operator">=</span> age<span class="token punctuation">.</span>fillna<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>   <span class="token operator">//</span><span class="token operator">//</span>将年龄用<span class="token number">0</span>来填充</code></pre>
-<h3 id="客串seaborn中的一个方法-distplot-age-画出age的树状图"><a href="#客串seaborn中的一个方法-distplot-age-画出age的树状图" class="headerlink" title="客串seaborn中的一个方法  distplot(age)  画出age的树状图"></a>客串seaborn中的一个方法  distplot(age)  画出age的树状图</h3><pre class=" language-python"><code class="language-python">sns<span class="token punctuation">.</span>distplot<span class="token punctuation">(</span>age<span class="token punctuation">)</span></code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20190915112502222.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzg5NTQ4Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<h3 id="describe-简要显示数据的数字特征"><a href="#describe-简要显示数据的数字特征" class="headerlink" title="describe()  简要显示数据的数字特征"></a>describe()  简要显示数据的数字特征</h3><pre class=" language-python"><code class="language-python">allData<span class="token punctuation">[</span><span class="token string">'Fare'</span><span class="token punctuation">]</span><span class="token punctuation">.</span>describe<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20190915113352696.PNG?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzg5NTQ4Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<pre><code>### ~corr() 计算相关系数</code></pre><ul>
-<li>method：可选{‘pearson’, ‘kendall’, ‘spearman’}<ul>
-<li>pearson: standard correlation coefficient</li>
-<li>kendall: Kendall Tau correlation coefficient</li>
-<li>spearman: Spearman rank correlation</li>
-</ul>
-</li>
-<li>min_periods： Minimum number of observations required per pair of columns to have a valid result. Currently only available for pearson and spearman correlation </li>
-</ul>
-<pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true"># 计算标准相关系数</span>
-corr_matrix <span class="token operator">=</span> housing<span class="token punctuation">.</span>corr<span class="token punctuation">(</span><span class="token punctuation">)</span>
-corr_matrix<span class="token punctuation">[</span><span class="token string">"median_house_value"</span><span class="token punctuation">]</span><span class="token punctuation">.</span>sort_values<span class="token punctuation">(</span>ascending<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
-
-<span class="token comment" spellcheck="true">#输出：</span>
-<span class="token comment" spellcheck="true"># median_house_value    1.000000</span>
-<span class="token comment" spellcheck="true"># median_income         0.687160</span>
-<span class="token comment" spellcheck="true"># total_rooms           0.135097</span>
-<span class="token comment" spellcheck="true"># housing_median_age    0.114110</span>
-<span class="token comment" spellcheck="true"># households            0.064506</span>
-<span class="token comment" spellcheck="true"># total_bedrooms        0.047689</span>
-<span class="token comment" spellcheck="true"># population           -0.026920</span>
-<span class="token comment" spellcheck="true"># longitude            -0.047432</span>
-<span class="token comment" spellcheck="true"># latitude             -0.142724</span>
-<span class="token comment" spellcheck="true"># Name: median_house_value, dtype: float64</span></code></pre>
+                <h1 id="2020年度总结"><a href="#2020年度总结" class="headerlink" title="2020年度总结"></a>2020年度总结</h1><blockquote>
+<p>突发奇想写的这篇文章，并没有细细构思，只是回忆一下2020年菜鸡豪做的事情，顺带整理一下回忆继续出发，奔向崭新的2021！<strong>我们都是努力奔跑的追梦人！</strong></p>
+</blockquote>
+<h2 id="一月"><a href="#一月" class="headerlink" title="一月"></a>一月</h2><p>其实现在回想一月发生的事情，脑海里只存留着几个断断续续的片段，但是我清楚的记得我的新年愿望：</p>
+<p>“<strong>能够比19年更努力，更幸运。</strong>”</p>
+<p><a href="https://imgchr.com/i/rjzuWj" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/31/rjzuWj.md.png" alt="rjzuWj.md.png"></a></p>
+<p>当然这个目标没有限定的界限，我说它实现了，那它就是实现了；我说它没有实现，那它就是没有实现。之所以定这么一个模糊的目标，是因为我不想失望了。至少我心里知道，比起整个19，我确实更加努力了，掌握了一些技能，也明白了一些道理。至于幸运，也算是挺幸运的吧。</p>
+<p><strong>总有一些误解，不去了解，是不会解开的！</strong>很多时候我们总是会主观臆断，从自己主观的角度去理解问题，不会明白别人是怎么想的。不过这都是人之常情，所谓<em>人不为己，天诛地灭。</em>确实是这样的，因为大家都是普通人。所以有时候真的需要冷静下来了解一下让你烦恼的事情，然后就会发现，有些事情，看似偶然，实则必然。</p>
+<p>还有就是，确实是有点可惜，来中北三年了，连一场像样的大学都没有见到过，北方的冬天真是这样子吗？很明显不是的，回家以后我就见到了真正的冬天，放眼望去，整个大地都是白的，那种久违的感觉着实Nice。再有就是在1月底看到偶像<strong>科比</strong>坠机事件，当时第一感觉就是：“卧槽，假的吧！！”然而事实就是如此，不接受也没办法。</p>
+<h2 id="二-三月"><a href="#二-三月" class="headerlink" title="二/三月"></a>二/三月</h2><p>这两个月对我来说过的十分平凡，但对中国来说非常不平凡，也就是老生常谈的新馆疫情，现在想想好像也就那么回事，但是真正经历的时候确实感受很深，小区不让出，街上每天都有交警巡逻，为了大家的生命安全，白衣天使们义不容辞的奔向战场，好像据说年龄比我也大不了几岁，当时的笔者热血沸腾，但是现在想想都是故事。当时，有程序员自发的在网站上面收集整理疫情信息，我有关注，还加了一个微信群，群里每天都会有人发一些疫情信息，并在<strong>GitHub</strong>上进行同步整理。</p>
+<p>大概是从三月份开始的吧，我每天早上都会和铁子去公园跑步，跑的不咋快，确挺快乐，其实我们还坚持了蛮久的，哈哈哈哈，不过自从铁子回学校以后我就开始堕落了，那个时候我才知道什么两周定律都是假的，唯一的敌人就是心中的欲望，而要做的就是满足心中的欲望，战胜自己，好的上战胜任何敌人：这也是为什么<strong>“我不是想赢，我只是不想输”</strong>，大概大家都是这么想的吧。</p>
+<p><a href="https://imgchr.com/i/rvkCrj" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/31/rvkCrj.md.jpg" alt="rvkCrj.md.jpg"></a></p>
+<h2 id="四-五月份"><a href="#四-五月份" class="headerlink" title="四/五月份"></a>四/五月份</h2><p>这个时候应该是上网课的时候了吧，可能这辈子都不会想到，竟然会有一天，真的可以坐在家里上课，听着老师在电脑上讲的那些知识，什么寄存器了，什么OSI了，听着听着，我好困啊，直接就睡了。哈哈，再家确实666，在家呆的想回学校也是没谁了，那应该是最长的一个寒假了，直接寒暑假一起过了，如果不是还有几个比赛一直在催着我学点东西，那我可能真的挂了。</p>
+<p>这个时候的考试就更不用说了，哈哈哈哈，大家懂的都懂，有考好的，就有考差的，我就属于后者，其实我觉得大学的考试真的不能说明一个人的专业水平，因为老师们经常说考试是通过性考试，目的就是让大家通过。如果真正做过项目的话就应该知道，在课上学的那点点皮毛的知识远远不够，不是说课上的东西不重要，而是说要学的东西远远比课上学的那点要多得多，很多知识，需要在自己摸索中去寻找规律，我发现，其实生活中的好多东西都是相同的，大家都能够理解的，这就是为什么大家都是普通人。</p>
+<p>网课大概就是这个样子，我不知道大家的单片机费了没有，反正我是废了，我就是个废物。</p>
+<h2 id="六-七-八月份"><a href="#六-七-八月份" class="headerlink" title="六/七/八月份"></a>六/七/八月份</h2><p>这几个月份，应该是连着暑假了吧，暑假有一个社会实践，我就是在本地找了一份兼职，每天的任务也很简单，就是擦车，在亲戚家的一个洗车厂做了大概有快一个月吧，给我的感觉就是，这大概就是普通人每天的生活吧，其实想想，如果能够在这样一个城市，办一个店铺，自己做一点自己喜欢的事情，每天有喜欢的人，偶尔碰到烦心的事情，这样的养老生活也是十分惬意的。之所以说是养老生活是因为我觉得，趁年轻还是应该出去闯一闯，长长见识，了解世界的多姿多彩，就能够了解自己的渺小。</p>
+<p>除了暑假社会实践，我剩下的任务应该就是两个比赛了，一个计设，一个互联网+，都说自己决定不了一生的贵人相助，我很感谢那些曾经给我帮助的人，但无以为报。有很多矫情的话，大家懂的都懂。今年的计设可以说是对我的成长比较大，对我的整个的人格成长也起到了至关重要的作用，让我明白了这个世界上，有些东西，只要你努力去做了，结果总不会太差。我们的作品是<strong>《检路》</strong>，也在比赛中取得了比较好的名次。</p>
+<p><a href="https://imgchr.com/i/rvEVvF" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/31/rvEVvF.png" alt="rvEVvF.png"></a></p>
+<p><a href="https://imgchr.com/i/rvEKER" target="_blank" rel="noopener"><img src="https://s3.ax1x.com/2020/12/31/rvEKER.jpg" alt="rvEKER.jpg"></a></p>
+<p>名字就不打码了，哈哈哈哈哈。</p>
+<h2 id="九月"><a href="#九月" class="headerlink" title="九月"></a>九月</h2><p>这个时候应该是开学了，开学就意味着有一堆的事情要做，据说大三上是物联网专业最忙的一个学期，现在想想好像这确实是真的，交不完的实验报告，计科都考完试了我们还没结课，当然这都是后话，金工实习也是比较开心的一件事情，不过确实蛮累的，到现在都依稀能想起钢锯在我耳边响的声音，都是一种经历吧。这个学期真的累成狗。</p>
+<h2 id="十-十一月"><a href="#十-十一月" class="headerlink" title="十/十一月"></a>十/十一月</h2><p>这两个月是课最多的时候，物联网最苦的时候大概就是，一次要交十几分实验报告，要求是先打印出来，然后手写，然后在一张一张的拍照，然后再把图片放在word文件中弄成电子版上传。这是我见过最6的交作业的方式，简直不要太好了，哈哈哈哈。这学期光实验报告就打了很多很多，都是money啊。</p>
+<h2 id="十二月"><a href="#十二月" class="headerlink" title="十二月"></a>十二月</h2><p>这个月也是魔鬼的一个月，分分分，学生的命根。不知道大家有没有听过这样一句话，<strong>内卷没有上限</strong>。这是今年才出来的，我的感受是比较深的，懂的都懂。大家都在以自己的方式努力着，我也一样，我也不知道我还能走多远，也不知道能到达一个什么样的高度，但是或许就是这样的未知数，才更让人向往。</p>
+<p>这个月有一个彩蛋，在2020年12月21号，我党正式接收我为中共预备党员，从此，笔者必将更加努力，更加用工，尽自己的努力做自己力所能及的事情。</p>
+<p>今天是2020年的最后一天了，保不齐明天就要被消灭了。</p>
+<p><code>2021的目标：</code>希望自己能够更加努力，更加幸运。</p>
+<p><strong>最后结尾：</strong>渐渐明白一些道理，也就没有什么很想维持的关系了，来着不拒，走者不留！当时光流逝，兜兜转转……</p>
 
             </div>
             <hr/>
@@ -566,7 +512,7 @@ corr_matrix<span class="token punctuation">[</span><span class="token string">"m
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://optimistqaq.github.io" rel="external nofollow noreferrer">Optimist</a>
+                    <a href="https://optimistqaq.github.io" rel="external nofollow noreferrer">秦风</a>
                 </span>
             </div>
             <div class="reprint__type">
@@ -576,7 +522,7 @@ corr_matrix<span class="token punctuation">[</span><span class="token string">"m
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://optimistqaq.github.io/2020/06/18/pandas-xue-xi-bi-ji/">https://optimistqaq.github.io/2020/06/18/pandas-xue-xi-bi-ji/</a>
+                    <a href="https://optimistqaq.github.io/2020/12/31/2020-nian-du-zong-jie/">https://optimistqaq.github.io/2020/12/31/2020-nian-du-zong-jie/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -589,7 +535,7 @@ corr_matrix<span class="token punctuation">[</span><span class="token string">"m
                     本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
                     许可协议。转载请注明来源
-                    <a href="https://optimistqaq.github.io" target="_blank">Optimist</a>
+                    <a href="https://optimistqaq.github.io" target="_blank">秦风</a>
                     !
                 </span>
             </div>
@@ -614,12 +560,8 @@ corr_matrix<span class="token punctuation">[</span><span class="token string">"m
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/python/">
-                                    <span class="chip bg-color">python</span>
-                                </a>
-                            
-                                <a href="/tags/Machine-Learning/">
-                                    <span class="chip bg-color">Machine Learning</span>
+                                <a href="/tags/%E6%9D%82%E8%AE%B0/">
+                                    <span class="chip bg-color">杂记</span>
                                 </a>
                             
                         </div>
@@ -1050,46 +992,43 @@ corr_matrix<span class="token punctuation">[</span><span class="token string">"m
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2020/06/19/numpy-xue-xi-bi-ji/">
+                <a href="/2020/12/31/2020-nian-du-zong-jie/">
                     <div class="card-image">
                         
+                        <img src="https://s3.ax1x.com/2020/12/31/rvpczd.jpg" class="responsive-img" alt="2020年度总结">
                         
-                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="Numpy学习笔记">
-                        
-                        <span class="card-title">Numpy学习笔记</span>
+                        <span class="card-title">2020年度总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            python的强大正是因为这些库函数的存在，因此学好这些库函数至关重要，尤其是想要学习机器学习的人。
+                            此后如竟没有炬火，我便是唯一的光！
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2020-06-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-31
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            Mercy
+                            秦风
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
-                    <a href="/tags/Machine-Learning/">
-                        <span class="chip bg-color">Machine Learning</span>
+                    <a href="/tags/%E6%9D%82%E8%AE%B0/">
+                        <span class="chip bg-color">杂记</span>
                     </a>
                     
                 </div>
@@ -1103,32 +1042,29 @@ corr_matrix<span class="token punctuation">[</span><span class="token string">"m
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/05/24/python-ji-chu/">
+                <a href="/2020/08/08/20-nian-an-zhuo-shu-qi-kao-he-suan-fa-ti/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="python基础">
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="20年安卓暑期考核算法题">
                         
-                        <span class="card-title">python基础</span>
+                        <span class="card-title">20年安卓暑期考核算法题</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            列表[TOC]
-列表是什么？列表由一系列特定顺序排列的元素组成的。在python中用 [] 来表示列表，并用 , 来分隔其中的元素。
-bicycles = ['trek', 'cannondale', 'specialized']
-prin
+                            2020年度Android实验室暑期考核之算法题。
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2020-05-24
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-08-08
                             </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            Mercy
+                            Optimist
                             
                         </span>
                     </div>
@@ -1138,6 +1074,14 @@ prin
                     
                     <a href="/tags/python/">
                         <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/Java/">
+                        <span class="chip bg-color">Java</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
                     </a>
                     
                 </div>
